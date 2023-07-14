@@ -13,6 +13,7 @@ namespace IncrementalSystem.Scripts.Incremental
         public TMP_Text titleTMP;
         public Image image;
         public TMP_Text costTMP;
+        public GameObject dollarTMP;
         public TMP_Text levelTMP;
 
         private void Start()
@@ -24,12 +25,13 @@ namespace IncrementalSystem.Scripts.Incremental
         {
             var item = IncrementalItemManager.Ins.GetItem(groupNo, itemNo);
             titleTMP.text = item.title;
-            image.sprite = item.sprite; 
+            image.sprite = item.sprite;
 
-            if(item.level == item.maxLevel)
+            if (item.level == item.maxLevel)
             {
                 costTMP.text = string.Empty;
                 levelTMP.text = $"Lvl. Max";
+                dollarTMP.SetActive(false);
             }
             else
             {
@@ -38,10 +40,5 @@ namespace IncrementalSystem.Scripts.Incremental
                 levelTMP.text = $"Lvl. {item.level}";
             }
         }
-
-        private void Update()
-        {
-            SetItem();
-        }
     }
-}   
+}

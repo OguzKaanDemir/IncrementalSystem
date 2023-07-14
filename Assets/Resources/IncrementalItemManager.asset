@@ -12,38 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93dc15fc7d1db0142842343f861ccfd8, type: 3}
   m_Name: IncrementalItemManager
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 8929879581233942632, guid: 2e348998f3039df42939470bbb8be603,
-    type: 3}
   items:
-  - itemList:
-    - title: X SPEED
-      sprite: {fileID: 0}
-      maxLevel: 10
-    - title: Y SPEED
-      sprite: {fileID: 0}
-      maxLevel: 10
-    - title: Z SPEED
-      sprite: {fileID: 0}
-      maxLevel: 10
-  - itemList:
-    - title: X SPEED
-      sprite: {fileID: 0}
-      maxLevel: 10
-    - title: Y SPEED
-      sprite: {fileID: 0}
-      maxLevel: 10
-    - title: Z SPEED
-      sprite: {fileID: 0}
-      maxLevel: 10
-  - itemList:
-    - title: X SPEED
-      sprite: {fileID: 0}
-      maxLevel: 10
-    - title: Y SPEED
-      sprite: {fileID: 0}
-      maxLevel: 10
-    - title: Z SPEED
-      sprite: {fileID: 0}
-      maxLevel: 10
-  _costsFromArray: 0
-  _costs: 320000006400000096000000c8000000fa0000002c01000090010000f401000058020000bc020000
+  - name: Rotation Obj
+    itemList:
+    - title: X ROTATION SPEED
+      sprite: {fileID: 21300000, guid: 777c47927a238c74ca831b803355f29f, type: 3}
+      maxLevel: 13
+    - title: Y ROTATION SPEED
+      sprite: {fileID: 21300000, guid: f2be848027f362540a1a3151d5187b07, type: 3}
+      maxLevel: 8
+    - title: Z ROTATION SPEED
+      sprite: {fileID: 21300000, guid: e04c3aa6c39f5664982609a8040c97f7, type: 3}
+      maxLevel: 6
+  - name: Position Obj
+    itemList:
+    - title: X POSITION SPEED
+      sprite: {fileID: 21300000, guid: 2189dc69f48818f48abe3774519ed0a5, type: 3}
+      maxLevel: 7
+    - title: Y POSITION SPEED
+      sprite: {fileID: 21300000, guid: c791cfcd96a57294eb99f85ea07c428d, type: 3}
+      maxLevel: 5
+  _costsFromCustom: 0
+  _costs: 320000006400000096000000c8000000fa0000002c01000090010000f401000058020000bc020000e8030000dc0500006c070000

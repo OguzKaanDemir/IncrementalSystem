@@ -18,7 +18,7 @@ namespace IncrementalSystem.Scripts
             }
         }
 
-        [SerializeField] private List<GameObject> incPanels = new();
+        [SerializeField] private List<GameObject> _incPanels = new();
         [SerializeField] private TMP_Text _objNameText;
         [SerializeField] private TMP_Text _goldText;
 
@@ -29,11 +29,11 @@ namespace IncrementalSystem.Scripts
 
         public void OpenPanel(int i)
         {
-            foreach (var item in incPanels)
+            foreach (var item in _incPanels)
                 item.SetActive(false);
 
-            incPanels[i].SetActive(true);
-            _objNameText.text = incPanels[i].name;
+            _incPanels[i].SetActive(true);
+            _objNameText.text = _incPanels[i].name;
         }
 
         public void SetGoldText()

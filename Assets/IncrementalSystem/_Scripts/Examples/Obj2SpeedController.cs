@@ -14,10 +14,5 @@ namespace IncrementalSystem.Scripts.Examples
         {
             IncrementalFunctionLogic.IncrementalFunction(1, 1, () => { /* Do Somethig Here */ UIManager.Ins.SetGoldText(); });
         }
-
-        public void ZSpeedAction()
-        {
-            IncrementalFunctionLogic.IncrementalFunction(1, 2, () => { /* Do Somethig Here */ UIManager.Ins.SetGoldText(); });
-        }
     }
 }

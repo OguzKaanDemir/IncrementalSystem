@@ -1,11 +1,13 @@
-using System.Linq;
 using UnityEngine;
+using System.Linq;
 using System.Collections.Generic;
+using IncrementalSystem.Scripts.Helpers;
 using IncrementalSystem.Scripts.Incremental;
 
 namespace IncrementalSystem.Scripts.Managers
 {
     [CreateAssetMenu(fileName = "IncrementalItemManager", menuName = "IncrementalItemManager")]
+    [HidePropertyInInspector(nameof(_costs), nameof(_costsFromCustom))]
     public class IncrementalItemManager : ScriptableObject
     {
         #region Singleton
@@ -22,10 +24,9 @@ namespace IncrementalSystem.Scripts.Managers
         #endregion
 
         #region Vars
-        public GameObject itemPrefab;
         public List<ItemList> items = new();
 
-        [SerializeField] private bool _costsFromArray;
+        [SerializeField] private bool _costsFromCustom;
         [SerializeField] private List<int> _costs = new();
 
         private CustomCost _customCost = new();
@@ -48,7 +49,7 @@ namespace IncrementalSystem.Scripts.Managers
         #region Cost
         public int GetCost(int level)
         {
-            if (_costsFromArray)
+            if (_costsFromCustom)
                 return _costs[level];
 
             else
@@ -61,7 +62,7 @@ namespace IncrementalSystem.Scripts.Managers
 
             public int Cost(int level)
             {
-                var newValue = startValue += level * 20;
+                var newValue = startValue + level * 20;
                 return newValue;
             }
         }
@@ -71,6 +72,7 @@ namespace IncrementalSystem.Scripts.Managers
     [System.Serializable]
     public class ItemList
     {
+        public string name;
         public List<Item> itemList = new();
     }
 }
