@@ -8,11 +8,11 @@ namespace IncrementalSystem.Scripts.Managers
         {
             get
             {
-                return DataManager.Gold; // Your Gold Referance Here.
+                return DataManager.Gold; // Your Gold Reference Here.
             }
             set
             {
-                DataManager.Gold = value; // Your Gold Referance Here.
+                DataManager.Gold = value; // Your Gold Reference Here.
             }
         }
     }

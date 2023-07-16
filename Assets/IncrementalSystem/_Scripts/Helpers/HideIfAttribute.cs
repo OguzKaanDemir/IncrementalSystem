@@ -3,12 +3,12 @@ using UnityEditor;
 
 namespace IncrementalSystem.Scripts.Helpers
 {
-    public class HidePropertyInInspectorAttribute : Attribute
+    public class HideIfAttribute : Attribute
     {
         public string propName;
         public string boolName;
 
-        public HidePropertyInInspectorAttribute(string propName, string boolName)
+        public HideIfAttribute(string propName, string boolName)
         {
             this.propName = propName;
             this.boolName = boolName;
@@ -25,7 +25,7 @@ namespace IncrementalSystem.Scripts.Helpers
         protected virtual void OnEnable()
         {
             _type = this.target.GetType();
-            var arr = _type.GetCustomAttributes(typeof(HidePropertyInInspectorAttribute), true) as HidePropertyInInspectorAttribute[];
+            var arr = _type.GetCustomAttributes(typeof(HideIfAttribute), true) as HideIfAttribute[];
             if (arr != null && arr.Length > 0)
             {
                 foreach (var a in arr)
@@ -56,7 +56,7 @@ namespace IncrementalSystem.Scripts.Helpers
             EditorGUI.BeginChangeCheck();
             var iterator = serializedObject.GetIterator();
 
-            var arr = _type.GetCustomAttributes(typeof(HidePropertyInInspectorAttribute), true) as HidePropertyInInspectorAttribute[];
+            var arr = _type.GetCustomAttributes(typeof(HideIfAttribute), true) as HideIfAttribute[];
             SerializedProperty boolVariable = null;
             foreach (var a in arr)
             {

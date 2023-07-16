@@ -32,5 +32,5 @@ MonoBehaviour:
     - title: Y POSITION SPEED
       sprite: {fileID: 21300000, guid: c791cfcd96a57294eb99f85ea07c428d, type: 3}
       maxLevel: 5
-  _costsFromCustom: 0
+  _costsFromCustom: 1
   _costs: 320000006400000096000000c8000000fa0000002c01000090010000f401000058020000bc020000e8030000dc0500006c070000

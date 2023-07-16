@@ -7,7 +7,7 @@ using IncrementalSystem.Scripts.Incremental;
 namespace IncrementalSystem.Scripts.Managers
 {
     [CreateAssetMenu(fileName = "IncrementalItemManager", menuName = "IncrementalItemManager")]
-    [HidePropertyInInspector(nameof(_costs), nameof(_costsFromCustom))]
+    [HideIf(nameof(_costs), nameof(_costsFromCustom))]
     public class IncrementalItemManager : ScriptableObject
     {
         #region Singleton

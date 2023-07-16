@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using IncrementalSystem.Scripts.Managers;
 
-namespace IncrementalSystem.Scripts
+namespace IncrementalSystem.Scripts.Examples
 {
     public class UIManager : MonoBehaviour
     {
