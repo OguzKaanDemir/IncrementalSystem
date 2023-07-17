@@ -27,3 +27,6 @@ Fill the OnClick events of the buttons with the functions from the script you cr
 
 Example CustomCost       
 ![CustomCost](https://github.com/OguzKaanDemir/IncrementalSystem/assets/80393390/5c9c1b72-178e-402d-9193-a3d5e29386a3)
+
+# Note
+Just create "one" IncrementalItemManager.
