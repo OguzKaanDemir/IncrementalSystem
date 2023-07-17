@@ -6,6 +6,12 @@ namespace IncrementalSystem.Scripts.Incremental
 {
     public class IncrementalFunctionLogic
     {
+        /// <summary>
+        /// Executes an incremental function for the specified group number and item number.
+        /// </summary>
+        /// <param name="groupNo">The group number of the incremental function.</param>
+        /// <param name="itemNo">The item number within the group.</param>
+        /// <param name="act">An action to be invoked after executing the incremental function.</param>
         public static void IncrementalFunction(int groupNo, int itemNo, Action act)
         {
             var incrementalItem = IncrementalItemManager.Ins.GetIncrementalItem(groupNo, itemNo);

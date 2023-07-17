@@ -17,7 +17,7 @@ namespace IncrementalSystem.Scripts.Helpers
 
     [CustomEditor(typeof(UnityEngine.Object), true)]
     [CanEditMultipleObjects()]
-    public class CustomEditorr : Editor
+    public class Drawer : Editor
     {
         private static Type _type;
         private string _hiddenProperty;

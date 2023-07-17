@@ -21,6 +21,9 @@ namespace IncrementalSystem.Scripts.Incremental
             SetItem();
         }
 
+        /// <summary>
+        /// Sets the properties of the incremental item.
+        /// </summary>
         public void SetItem()
         {
             var item = IncrementalItemManager.Ins.GetItem(groupNo, itemNo);

@@ -23,6 +23,11 @@ namespace IncrementalSystem.Scripts.UI
         public Color notEnoughMoneyColor;
         public Color maxLevelColor;
 
+        /// <summary>
+        /// Handles button click events.
+        /// </summary>
+        /// <param name="type">The type of text to display.</param>
+        /// <param name="incrementaItemPos">The position of the incremental item.</param>
         public void OnButtonClick(TextType type, Vector3 incrementaItemPos)
         {
             var newText = Instantiate(textPrefab, incrementaItemPos, Quaternion.identity, transform);

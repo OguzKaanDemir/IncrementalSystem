@@ -33,11 +33,24 @@ namespace IncrementalSystem.Scripts.Managers
         #endregion
 
         #region Item
+
+        /// <summary>
+        /// Gets the item based on the specified group number and item number.
+        /// </summary>
+        /// <param name="groupNo">The group number of the item.</param>
+        /// <param name="itemNo">The item number within the group.</param>
+        /// <returns>The item with the specified group number and item number.</returns>
         public Item GetItem(int groupNo, int itemNo)
         {
             return items[groupNo].itemList[itemNo];
         }
 
+        /// <summary>
+        /// Gets the incremental item based on the specified group number and item number.
+        /// </summary>
+        /// <param name="groupNo">The group number of the incremental item.</param>
+        /// <param name="itemNo">The item number within the group.</param>
+        /// <returns>The incremental item with the specified group number and item number.</returns>
         public IncrementalItem GetIncrementalItem(int groupNo, int itemNo)
         {
             var items = FindObjectsOfType<IncrementalItem>();
@@ -47,6 +60,12 @@ namespace IncrementalSystem.Scripts.Managers
         #endregion
 
         #region Cost
+
+        /// <summary>
+        /// Gets the cost value based on the specified level.
+        /// </summary>
+        /// <param name="level">The level for which to calculate the cost.</param>
+        /// <returns>The cost value.</returns>
         public int GetCost(int level)
         {
             if (_costsFromCustom)
@@ -56,13 +75,17 @@ namespace IncrementalSystem.Scripts.Managers
                 return _customCost.Cost(level);
         }
 
+        
         private class CustomCost
         {
-            private int startValue = 50;
+            private int _startValue = 50;
 
+            /// <summary>
+            /// Your custom cost algorithm here.
+            /// </summary>
             public int Cost(int level)
             {
-                var newValue = startValue + level * 20;
+                var newValue = _startValue + level * 20;
                 return newValue;
             }
         }
